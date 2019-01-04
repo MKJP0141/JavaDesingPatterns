@@ -5,11 +5,12 @@ namespace IDCard
 {
     public class IDCardFactory : Factory
     {
+        private int _id = 100;
         private Dictionary<int, string> _owners = new Dictionary<int, string>();
 
-        protected override Product CreateProduct(int id, string owner)
+        protected override Product CreateProduct(string owner)
         {
-            return new IDCard(id, owner);
+            return new IDCard(_id++, owner);
         }
 
         protected override void RegisterProduct(Product product)

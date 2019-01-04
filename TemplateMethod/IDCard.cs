@@ -9,9 +9,9 @@ namespace IDCard
         private string _owner;
         public IDCard(int id, string owner)
         {
-            Console.WriteLine($"{owner}のカードを作ります");
             this._id = id;
             this._owner = owner;
+            Console.WriteLine($"{_owner}({_id})のカードを作ります");
         }
 
         public override void Use()
