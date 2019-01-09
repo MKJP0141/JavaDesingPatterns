@@ -29,8 +29,13 @@ namespace Builder
         public override void MakeTitle(string title)
         {
             _buffer.Append("=============================\n");
-            _buffer.Append($"『{title}』˜\n");
+            _buffer.Append($"『{title}』\n");
             _buffer.Append("\n");
+        }
+
+        public string GetResult()
+        {
+            return _buffer.ToString();
         }
     }
 }
