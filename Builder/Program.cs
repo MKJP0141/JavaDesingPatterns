@@ -28,6 +28,14 @@ namespace Builder
                 string filename = htmlBuilder.GetResult();
                 Console.WriteLine($"{filename}が作成されました。");
             }
+            else if (args[0].Equals("csv", StringComparison.OrdinalIgnoreCase))
+            {
+                CSVBuilder textBuilder = new CSVBuilder();
+                Director director = new Director(textBuilder);
+                director.Construct();
+                string result = textBuilder.GetResult();
+                Console.WriteLine(result);
+            }
             else
             {
                 Usage();

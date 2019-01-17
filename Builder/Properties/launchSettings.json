@@ -2,7 +2,7 @@
   "profiles": {
     "Builder": {
       "commandName": "Project",
-      "commandLineArgs": "plain"
+      "commandLineArgs": "csv"
     }
   }
 }
