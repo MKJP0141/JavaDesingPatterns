@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractFactory.ListFactory
+namespace AbstractFactory.TableFactory
 {
-    public class ListPage : Page
+    public class TablePage : Page
     {
-        public ListPage(string title, string author) : base(title, author)
+        public TablePage(string title, string author) : base(title, author)
         {
         }
 
@@ -17,14 +17,14 @@ namespace AbstractFactory.ListFactory
             builder.AppendLine($"<html><head><title>{_title}</title></head>");
             builder.AppendLine("<body>");
             builder.AppendLine($"<h1>{_title}</h1>");
-            builder.AppendLine("<ul>");
+            builder.AppendLine("<table width=\"80%\" border\"3\"");
             var iterator = _contents.GetEnumerator();
             while (iterator.MoveNext())
             {
                 var item = iterator.Current;
-                builder.AppendLine(item.MakeHTML());
+                builder.AppendLine($"<tr>{item.MakeHTML()}</tr>");
             }
-            builder.AppendLine("</ul>");
+            builder.AppendLine("</table>");
             builder.AppendLine($"<hr><address>{_author}</address>");
             builder.AppendLine("</body></html>");
             return builder.ToString();

@@ -7,8 +7,7 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
-            var arg = "ListFactory";
-            var factory = Factory.GetFactory(arg);
+            var factory = Factory.GetFactory(args[0]);
 
             Link asahi = factory.CreateLink("朝日新聞", "http://www.asahi.com/");
             Link yomiuri = factory.CreateLink("読売新聞", "http://www.yomiuri.co.jp/");

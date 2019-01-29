@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AbstractFactory.listFactory;
+using AbstractFactory.ListFactory;
 
 namespace AbstractFactory.factory
 {
@@ -12,7 +12,7 @@ namespace AbstractFactory.factory
             Factory factory = null;
             try
             {
-                var type = Type.GetType($"AbstractFactory.listFactory.{className}");
+                var type = Type.GetType($"AbstractFactory.{className}.{className}");
                 factory = (Factory)Activator.CreateInstance(type);
             }
             catch (Exception)

@@ -3,23 +3,23 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractFactory.ListFactory
+namespace AbstractFactory.TableFactory
 {
-    public class ListFactory : Factory
+    public class TableFactory : Factory
     {
         public override Link CreateLink(string caption, string url)
         {
-            return new ListLink(caption, url);
+            return new TableLink(caption, url);
         }
 
         public override Page CreatePage(string title, string author)
         {
-            return new ListPage(title, author);
+            return new TablePage(title, author);
         }
 
         public override Tray CreateTray(string caption)
         {
-            return new ListTray(caption);
+            return new TableTray(caption);
         }
     }
 }

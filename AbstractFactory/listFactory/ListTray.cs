@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AbstractFactory.listFactory
+namespace AbstractFactory.ListFactory
 {
     public class ListTray : Tray
     {
