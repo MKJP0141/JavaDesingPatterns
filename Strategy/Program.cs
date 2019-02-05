@@ -6,10 +6,10 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            int seed1 = 314;
+            int seed1 = 312;
             int seed2 = 15;
 
-            Player player1 = new Player("Taro", new WinningStrategy(seed1));
+            Player player1 = new Player("Taro", new RandomStrategy(seed1));
             Player player2 = new Player("Hana", new ProbStrategy(seed2));
 
             for (int i = 0; i < 10000; i++)
