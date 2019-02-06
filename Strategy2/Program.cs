@@ -17,6 +17,9 @@ namespace Strategy2
 
             SortAndPrint sap = new SortAndPrint(datas, new SelectionSorter());
             sap.Execute();
+
+            sap = new SortAndPrint(datas, new LengthSorter());
+            sap.Execute();
         }
     }
 }
