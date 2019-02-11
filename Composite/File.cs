@@ -23,7 +23,7 @@ namespace Composite
             return _size;
         }
 
-        protected override void PrintList(string prefix)
+        internal override void PrintList(string prefix)
         {
             Console.WriteLine($"{prefix}/{this.ToString()}");
         }

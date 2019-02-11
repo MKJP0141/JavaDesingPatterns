@@ -6,7 +6,7 @@ namespace Composite
     public class Directory : Entry
     {
         private readonly string _name;
-        private readonly List<string> _directory = new List<string>();
+        private readonly List<object> _directory = new List<object>();
 
         public Directory(string name)
         {
@@ -21,28 +21,29 @@ namespace Composite
         public override int GetSize()
         {
             int size = 0;
-            Iterator it = _directory.GetEnumerator();
-            while (it.HasNext())
+            var it = _directory.GetEnumerator();
+            while (it.MoveNext())
             {
-                Entry entry = (Entry)it.Next();
+                Entry entry = (Entry)it.Current;
                 size += entry.GetSize();
             }
             return size;
         }
 
-        public Entry Add(Entry entry)
+        public override Entry Add(Entry entry)
         {
             _directory.Add(entry);
+            entry._parent = this;
             return this;
         }
 
-        protected override void PrintList(string prefix)
+        internal override void PrintList(string prefix)
         {
             Console.WriteLine($"{prefix}/{this.ToString()}");
-            Iterator it = _directory.GetEnumerator();
-            while (it.HasNext())
+            var it = _directory.GetEnumerator();
+            while (it.MoveNext())
             {
-                Entry entry = (Entry)it.Next();
+                Entry entry = (Entry)it.Current;
                 entry.PrintList($"{prefix}/{_name}");
             }
         }
