@@ -25,6 +25,24 @@ namespace Decorator
                 ), '/'
             );
             b4.Show();
+
+            Display b5 = new FullBorder(
+                new UpdownBorder(
+                    new SideBorder(
+                        new UpdownBorder(
+                            new SideBorder(
+                                new StringDisplay("Hello."),
+                                '*'
+                            ),
+                            '='
+                        ),
+                        '|'
+                    ),
+                    '/'
+                )
+            );
+            b5.Show();
+
         }
     }
 }
