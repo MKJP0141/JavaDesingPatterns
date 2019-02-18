@@ -43,6 +43,16 @@ namespace Decorator
             );
             b5.Show();
 
+            MultiStringDisplay md = new MultiStringDisplay();
+            md.Add("おはようございます。");
+            md.Add("こんにちは。");
+            md.Add("おやすみなさい、また明日。");
+            md.Show();
+
+            Display d6 = new SideBorder(md, '#');
+            d6.Show();
+            Display d7 = new FullBorder(md);
+            d7.Show();
         }
     }
 }
