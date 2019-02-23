@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorReal", "VisitorReal\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorReal.Test", "VisitorReal.Test\VisitorReal.Test.csproj", "{C165CF12-111C-481B-8474-05A65C7FB8EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "VisitorPractice\Composite.csproj", "{804C2420-E838-49E8-98E4-B5976027EF1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{C165CF12-111C-481B-8474-05A65C7FB8EF}.Release|x64.Build.0 = Release|Any CPU
 		{C165CF12-111C-481B-8474-05A65C7FB8EF}.Release|x86.ActiveCfg = Release|Any CPU
 		{C165CF12-111C-481B-8474-05A65C7FB8EF}.Release|x86.Build.0 = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|x64.Build.0 = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Debug|x86.Build.0 = Debug|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x64.ActiveCfg = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x64.Build.0 = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.ActiveCfg = Release|Any CPU
+		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
