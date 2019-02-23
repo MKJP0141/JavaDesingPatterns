@@ -1,4 +1,5 @@
 ﻿using System;
+using VisitorReal.Model;
 
 namespace VisitorReal
 {
@@ -6,7 +7,15 @@ namespace VisitorReal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Employees e = new Employees();
+            e.Attach(new Clerk());
+            e.Attach(new Director());
+            e.Attach(new President());
+
+            e.Accept(new IncomeVisitor());
+            e.Accept(new VacationVisitor());
+
+            Console.ReadKey();
         }
     }
 }
