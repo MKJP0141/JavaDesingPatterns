@@ -32,9 +32,15 @@ namespace Composite
                 yuki.Add(new File("diary.html", 100));
                 yuki.Add(new File("Composite.java", 200));
                 hanako.Add(new File("memo.tex", 300));
+                hanako.Add(new File("index.html", 350));
                 tomura.Add(new File("game.doc", 400));
                 tomura.Add(new File("junk.mail", 500));
                 rootdir.Accept(new ListVisitor());
+
+                FileFindVisitor ffv = new FileFindVisitor(".html");
+                rootdir.Accept(ffv);
+
+                Console.WriteLine("HTML files are:");
             }
             catch (FileTreatmentException e)
             {
