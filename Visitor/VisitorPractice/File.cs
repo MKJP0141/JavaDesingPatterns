@@ -1,4 +1,5 @@
 using System;
+using VisitorPractice;
 
 namespace Composite
 {
@@ -26,6 +27,11 @@ namespace Composite
         internal override void PrintList(string prefix)
         {
             Console.WriteLine($"{prefix}/{this.ToString()}");
+        }
+
+        public override void Accept(Visitor v)
+        {
+            v.Visit(this);
         }
     }
 }

@@ -1,8 +1,10 @@
+using System.Collections;
 using System.Text;
+using VisitorPractice;
 
 namespace Composite
 {
-    public abstract class Entry
+    public abstract class Entry : Element, IEnumerable
     {
         internal Entry _parent;
         public abstract string GetName();
@@ -35,6 +37,16 @@ namespace Composite
         public override string ToString()
         {
             return GetName() + $" ({GetSize()})";
+        }
+
+        public virtual IEnumerator GetEnumerator()
+        {
+            throw new FileTreatmentException();
+        }
+
+        public virtual void Accept(Visitor v)
+        {
+            throw new FileTreatmentException();
         }
     }
 }

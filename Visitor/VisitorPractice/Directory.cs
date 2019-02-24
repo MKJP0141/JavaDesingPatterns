@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using VisitorPractice;
 
 namespace Composite
 {
@@ -46,6 +48,19 @@ namespace Composite
                 Entry entry = (Entry)it.Current;
                 entry.PrintList($"{prefix}/{_name}");
             }
+        }
+
+        public override IEnumerator GetEnumerator()
+        {
+            foreach (Entry entry in _directory)
+            {
+                yield return entry;
+            }
+        }
+
+        public override void Accept(Visitor v)
+        {
+            v.Visit(this);
         }
     }
 }
