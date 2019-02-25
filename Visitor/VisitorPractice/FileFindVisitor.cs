@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Composite;
 
 namespace VisitorPractice
@@ -9,16 +10,19 @@ namespace VisitorPractice
 
         private string _ext;
 
+        private List<File> _foundFiles;
+
         public FileFindVisitor(string ext)
         {
             _ext = ext;
+            _foundFiles = new List<File>();
         }
 
         public override void Visit(File file)
         {
             var ext = System.IO.Path.GetExtension(file.GetName());
             if (ext == _ext)
-                Console.WriteLine(file.GetName());
+                _foundFiles.Add(file);
         }
 
         public override void Visit(Directory directory)
@@ -28,6 +32,17 @@ namespace VisitorPractice
             {
                 var entry = (Entry)it.Current;
                 entry.Accept(this);
+            }
+        }
+
+        public IEnumerable<File> FoundFiles
+        {
+            get
+            {
+                foreach (var file in _foundFiles)
+                {
+                    yield return file;
+                }
             }
         }
     }

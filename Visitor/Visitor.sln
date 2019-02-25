@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorReal.Test", "Visitor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "VisitorPractice\Composite.csproj", "{804C2420-E838-49E8-98E4-B5976027EF1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPractice.Test", "VisitorPractice.Test\VisitorPractice.Test.csproj", "{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x64.Build.0 = Release|Any CPU
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.ActiveCfg = Release|Any CPU
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.Build.0 = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|x64.Build.0 = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Debug|x86.Build.0 = Debug|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|x64.ActiveCfg = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|x64.Build.0 = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|x86.ActiveCfg = Release|Any CPU
+		{12A6BC71-48EC-4E6A-B742-CE2F8AB7DAC8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

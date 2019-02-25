@@ -41,6 +41,10 @@ namespace Composite
                 rootdir.Accept(ffv);
 
                 Console.WriteLine("HTML files are:");
+                foreach (var file in ffv.FoundFiles)
+                {
+                    Console.WriteLine(file);
+                }
             }
             catch (FileTreatmentException e)
             {
