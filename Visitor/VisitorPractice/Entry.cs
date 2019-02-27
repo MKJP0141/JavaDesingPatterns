@@ -2,7 +2,7 @@ using System.Collections;
 using System.Text;
 using VisitorPractice;
 
-namespace Composite
+namespace VisitorPractice
 {
     public abstract class Entry : Element, IEnumerable
     {

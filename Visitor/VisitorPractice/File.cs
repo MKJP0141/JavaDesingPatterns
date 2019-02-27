@@ -1,7 +1,7 @@
 using System;
 using VisitorPractice;
 
-namespace Composite
+namespace VisitorPractice
 {
     public class File : Entry
     {

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using VisitorPractice;
 
-namespace Composite
+namespace VisitorPractice
 {
     public class Directory : Entry
     {
