@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorReal", "VisitorReal\VisitorReal.csproj", "{4510D4BB-FDC6-4665-AA9C-09ED11505A4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorReal", "VisitorReal\VisitorReal.csproj", "{4510D4BB-FDC6-4665-AA9C-09ED11505A4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorReal.Test", "VisitorReal.Test\VisitorReal.Test.csproj", "{C165CF12-111C-481B-8474-05A65C7FB8EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorReal.Test", "VisitorReal.Test\VisitorReal.Test.csproj", "{C165CF12-111C-481B-8474-05A65C7FB8EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "VisitorPractice\Composite.csproj", "{804C2420-E838-49E8-98E4-B5976027EF1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "VisitorPractice\Composite.csproj", "{804C2420-E838-49E8-98E4-B5976027EF1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqTest", "MoqTest\MoqTest.csproj", "{A307BAE9-59FB-4682-A8ED-447DB8A01928}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4510D4BB-FDC6-4665-AA9C-09ED11505A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +57,23 @@ Global
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x64.Build.0 = Release|Any CPU
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.ActiveCfg = Release|Any CPU
 		{804C2420-E838-49E8-98E4-B5976027EF1E}.Release|x86.Build.0 = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|x64.Build.0 = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Debug|x86.Build.0 = Debug|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|x64.ActiveCfg = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|x64.Build.0 = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|x86.ActiveCfg = Release|Any CPU
+		{A307BAE9-59FB-4682-A8ED-447DB8A01928}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AB6F99D-8A77-4FA1-8011-FC78FAC2DA0D}
 	EndGlobalSection
 EndGlobal
