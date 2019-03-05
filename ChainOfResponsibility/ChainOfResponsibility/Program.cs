@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChainOfResponsibility.Approver;
+using System;
 
 namespace ChainOfResponsibility
 {
@@ -6,7 +7,12 @@ namespace ChainOfResponsibility
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var director = new Director();
+            var vicePresident = new VicePresident();
+            director.SetNext(vicePresident);
+
+            director.ProcessRequest(9999);
+            director.ProcessRequest(10001);
         }
     }
 }
