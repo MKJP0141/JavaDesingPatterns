@@ -49,7 +49,7 @@ namespace MediatorExample
             if (usernameTextBox.Text.Length > 0)
             {
                 passwordTextBox.SetColleagueEnabled(true);
-                if (passwordTextBox.Text.Length > 0)
+                if (usernameTextBox.Text.Length >= 4 && passwordTextBox.Text.Length >= 4)
                 {
                     okButton.SetColleagueEnabled(true);
                 }
