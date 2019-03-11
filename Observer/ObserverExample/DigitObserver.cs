@@ -5,7 +5,7 @@ namespace ObserverExample
 {
     public class DigitObserver : Observer
     {
-        public void Update(NumberGenerator generator)
+        public virtual void Update(NumberGenerator generator)
         {
             Console.WriteLine($"DigitObserver:{generator.GetNumber()}");
             try

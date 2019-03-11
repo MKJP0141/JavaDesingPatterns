@@ -5,7 +5,7 @@ namespace ObserverExample
 {
     public class GraphObserver : Observer
     {
-        public void Update(NumberGenerator generator)
+        public virtual void Update(NumberGenerator generator)
         {
             Console.Write("GraphOvserver:");
             int count = generator.GetNumber();

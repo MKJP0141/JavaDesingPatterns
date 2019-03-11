@@ -16,7 +16,7 @@ namespace ObserverExample
             _observers.Remove(observer);
         }
 
-        public void NotifyObservers()
+        public virtual void NotifyObservers()
         {
             var it = _observers.GetEnumerator();
             while (it.MoveNext())
