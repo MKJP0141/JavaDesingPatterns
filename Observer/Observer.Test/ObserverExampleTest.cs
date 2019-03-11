@@ -39,5 +39,22 @@ namespace Observer.Test
 
             generatorMock.Verify(x => x.NotifyObservers(), Times.Exactly(20));
         }
+
+        [Fact]
+        public void PaddingObserver_Update_Pad5Text()
+        {
+            var mock = new Mock<IncrementalNumberGenerator>(5,10,5);
+            mock.SetupSequence(x => x.GetNumber())
+                .Returns(5)
+                .Returns(10)
+                .Returns(15);
+
+            var observer = new PaddingObserver("C#");
+            observer.Update(mock.Object);
+            observer.Update(mock.Object);
+            observer.Update(mock.Object);
+
+            mock.Verify(x => x.GetNumber(), Times.Exactly(3));
+        }
     }
 }
