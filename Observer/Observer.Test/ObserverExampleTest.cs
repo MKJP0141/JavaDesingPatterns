@@ -11,7 +11,8 @@ namespace Observer.Test
         public void NumberGenerator_Notify_SendAlert()
         {
             var digitMock = new Mock<DigitObserver>();
-            digitMock.Setup(x => x.Update(It.IsAny<NumberGenerator>()));
+            NumberGenerator argInstance = null;
+            digitMock.Setup(x => x.Update(It.IsAny<NumberGenerator>())).Callback<NumberGenerator>(sm => argInstance = sm);
 
             var graphMock = new Mock<GraphObserver>();
             graphMock.Setup(x => x.Update(It.IsAny<NumberGenerator>()));
@@ -22,6 +23,7 @@ namespace Observer.Test
             generator.NotifyObservers();
 
             digitMock.Verify(x => x.Update(generator), Times.Once);
+            Assert.Same(argInstance, generator);
             graphMock.Verify(x => x.Update(generator), Times.Once);
         }
 
