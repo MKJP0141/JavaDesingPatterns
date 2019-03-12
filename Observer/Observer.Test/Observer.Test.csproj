@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ObserverExample\Observer.csproj" />
+    <ProjectReference Include="..\MyObserver\MyObserver.csproj" />
   </ItemGroup>
 
 </Project>
