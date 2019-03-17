@@ -22,7 +22,7 @@ namespace MementoExample.Game
 
         public void Bet()
         {
-            var dice = _random.Next(1, 6) + 1;
+            var dice = _random.Next(0, 6) + 1;
             if (dice == 1)
             {
                 _money += 100;
@@ -49,9 +49,9 @@ namespace MementoExample.Game
         {
             var memento = new Memento(_money);
             var iterator = _fruits.GetEnumerator();
-            while (iterator.MoveNext())
+
+            foreach (var fruit in _fruits)
             {
-                var fruit = iterator.Current;
                 if (fruit.StartsWith("おいしい"))
                 {
                     memento.AddFruits(fruit);
@@ -81,7 +81,7 @@ namespace MementoExample.Game
         private string GetFruit()
         {
             var prefix = "";
-            if (_random.Next(0, 1) + 1 == 1)
+            if (_random.Next(0, 2) == 1)
             {
                 prefix = "おいしい";
             }

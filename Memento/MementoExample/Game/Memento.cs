@@ -20,15 +20,6 @@ namespace MementoExample.Game
             _fruits.Add(fruit);
         }
 
-        internal IEnumerable<string> Fruits
-        {
-            get 
-            {
-                foreach (var fruit in _fruits)
-                {
-                    yield return (string)fruit.Clone();
-                }
-            }
-        }
+        internal IEnumerable<string> Fruits => _fruits;
     }
 }
