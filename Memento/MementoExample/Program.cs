@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
 using MementoExample.Game;
 
@@ -9,7 +10,17 @@ namespace MementoExample
         static void Main(string[] args)
         {
             Gamer gamer = new Gamer(100);
-            Memento memento = gamer.CreateMemento();
+
+            Memento memento;
+            if (File.Exists("memento.dat"))
+            {
+                memento = Memento.Deserialize();
+            }
+            else
+            {
+                memento = gamer.CreateMemento();
+            }
+
             for (int i = 0; i < 100; i++)
             {
                 Console.WriteLine($"==== {i}");
@@ -32,15 +43,16 @@ namespace MementoExample
 
                 try
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(10);
                 }
                 catch (System.Exception)
                 {
-                    
+
                     throw;
                 }
                 Console.WriteLine("");
             }
+            memento.Serialize();
         }
     }
 }
