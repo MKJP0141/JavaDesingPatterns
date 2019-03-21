@@ -46,8 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Draw\Shape.cs" />
-    <Compile Include="Draw\Shapes.cs" />
+    <Compile Include="DrawCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawCanvas.Designer.cs">
+      <DependentUpon>DrawCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawCommand.cs" />
+    <Compile Include="Draw\ICommand.cs" />
+    <Compile Include="Draw\IDrawable.cs" />
+    <Compile Include="Draw\MacroCommand.cs" />
+    <Compile Include="EnumerableExtentions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DrawCanvas.resx">
+      <DependentUpon>DrawCanvas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
