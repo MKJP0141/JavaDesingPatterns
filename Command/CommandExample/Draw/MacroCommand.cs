@@ -8,19 +8,16 @@ namespace CommandExample.Draw
 {
     public class MacroCommand : ICommand
     {
-        private Stack<ICommand> _commands = new Stack<ICommand>();
+        private Stack<Stack<ICommand>> _commands = new Stack<Stack<ICommand>>();
 
         public void Execute()
         {
-            _commands.ForEach(cmd => cmd.Execute());
+            _commands.ForEach(item => item.ForEach(cmd => cmd.Execute()));
         }
 
-        public void Append(ICommand cmd)
+        public void Append(Stack<ICommand> cmds)
         {
-            if (cmd != this)
-            {
-                _commands.Push(cmd);
-            }
+            _commands.Push(cmds);
         }
 
         public void Undo()

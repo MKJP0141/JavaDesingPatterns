@@ -14,6 +14,7 @@ namespace CommandExample
     public partial class Form1 : Form
     {
         private MacroCommand _history = new MacroCommand();
+        private Stack<ICommand> _oneStroke = new Stack<ICommand>();
         private bool _drag = false;
 
         public Form1()
@@ -31,6 +32,7 @@ namespace CommandExample
         private void drawCanvas_MouseDown(object sender, MouseEventArgs e)
         {
             _drag = true;
+            _oneStroke.Clear();
         }
 
         private void drawCanvas_MouseMove(object sender, MouseEventArgs e)
@@ -38,7 +40,7 @@ namespace CommandExample
             if (_drag)
             {
                 ICommand cmd = new DrawCommand(drawCanvas, e.Location);
-                _history.Append(cmd);
+                _oneStroke.Push(cmd);
                 cmd.Execute();
             }
         }
@@ -46,7 +48,7 @@ namespace CommandExample
         private void drawCanvas_MouseUp(object sender, MouseEventArgs e)
         {
             _drag = false;
-
+            _history.Append(_oneStroke);
         }
 
         private void button2_Click(object sender, EventArgs e)
