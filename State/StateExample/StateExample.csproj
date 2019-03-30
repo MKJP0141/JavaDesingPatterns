@@ -55,6 +55,7 @@
     <Compile Include="Safe\DayState.cs" />
     <Compile Include="Safe\IContext.cs" />
     <Compile Include="Safe\IState.cs" />
+    <Compile Include="Safe\LunchState.cs" />
     <Compile Include="Safe\NightState.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

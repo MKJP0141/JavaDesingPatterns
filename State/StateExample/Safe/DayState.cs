@@ -23,7 +23,11 @@ namespace StateExample.Safe
 
         public void DoClock(IContext context, int hour)
         {
-            if (hour < 9 || 17 <= hour)
+            if (12 <= hour && hour < 13)
+            {
+                context.ChangeState(LunchState.Instance);
+            }
+            else if (hour < 9 || 17 <= hour)
             {
                 context.ChangeState(NightState.Instance);
             }
