@@ -8,14 +8,14 @@ namespace InterpreterSample
     {
         private string _text;
 
-        private List<string> _tokens = new List<string>();
+        private Queue<string> _tokens = new Queue<string>();
 
         private string _currentToken;
 
         public Context(string text)
         {
             _text = text;
-            _tokens = _text.Split(' ').ToList();
+            _tokens = new Queue<string>(_text.Split(' '));
             NextToken();
         }
 
@@ -29,7 +29,7 @@ namespace InterpreterSample
             var iterator = _tokens.GetEnumerator();
             if (iterator.MoveNext())
             {
-                _currentToken = iterator.Current;
+                _currentToken = _tokens.Dequeue();
             }
             else
             {

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace InterpreterSample
 {
@@ -31,7 +32,13 @@ namespace InterpreterSample
 
         public override string ToString()
         {
-            return _list.ToString();
+            var builder = new StringBuilder();
+            foreach (var line in _list)
+            {
+                builder.Append($"{line} ");
+            }
+
+            return builder.ToString();
         }
     }
 }
